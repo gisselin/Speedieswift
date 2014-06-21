@@ -14,6 +14,8 @@
 		F08BA3721955DF3B00C1DDAD /* SimpleSpeedometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA3711955DF3B00C1DDAD /* SimpleSpeedometerTests.swift */; };
 		F08BA37C1955EA9E00C1DDAD /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA37B1955EA9E00C1DDAD /* CLLocationExtension.swift */; };
 		F08BA380195644DB00C1DDAD /* DecimalRGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA37F195644DA00C1DDAD /* DecimalRGBColor.swift */; };
+		F08BA38219564E9700C1DDAD /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = F08BA38119564E9700C1DDAD /* LICENSE.md */; };
+		F08BA38419564EEB00C1DDAD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F08BA38319564EEA00C1DDAD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		F08BA3711955DF3B00C1DDAD /* SimpleSpeedometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpeedometerTests.swift; sourceTree = "<group>"; };
 		F08BA37B1955EA9E00C1DDAD /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		F08BA37F195644DA00C1DDAD /* DecimalRGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalRGBColor.swift; sourceTree = "<group>"; };
+		F08BA38119564E9700C1DDAD /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		F08BA38319564EEA00C1DDAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		F08BA3501955DF3B00C1DDAD = {
 			isa = PBXGroup;
 			children = (
+				F08BA38319564EEA00C1DDAD /* README.md */,
+				F08BA38119564E9700C1DDAD /* LICENSE.md */,
 				F08BA35B1955DF3B00C1DDAD /* SimpleSpeedometer */,
 				F08BA36E1955DF3B00C1DDAD /* SimpleSpeedometerTests */,
 				F08BA35A1955DF3B00C1DDAD /* Products */,
@@ -195,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08BA38219564E9700C1DDAD /* LICENSE.md in Resources */,
 				F08BA3641955DF3B00C1DDAD /* Main.storyboard in Resources */,
 				F08BA3661955DF3B00C1DDAD /* Images.xcassets in Resources */,
 			);
@@ -216,6 +223,7 @@
 			files = (
 				F08BA3611955DF3B00C1DDAD /* ViewController.swift in Sources */,
 				F08BA380195644DB00C1DDAD /* DecimalRGBColor.swift in Sources */,
+				F08BA38419564EEB00C1DDAD /* README.md in Sources */,
 				F08BA37C1955EA9E00C1DDAD /* CLLocationExtension.swift in Sources */,
 				F08BA35F1955DF3B00C1DDAD /* AppDelegate.swift in Sources */,
 			);
