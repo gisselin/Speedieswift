@@ -12,6 +12,8 @@
 		F08BA3641955DF3B00C1DDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08BA3621955DF3B00C1DDAD /* Main.storyboard */; };
 		F08BA3661955DF3B00C1DDAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F08BA3651955DF3B00C1DDAD /* Images.xcassets */; };
 		F08BA3721955DF3B00C1DDAD /* SimpleSpeedometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA3711955DF3B00C1DDAD /* SimpleSpeedometerTests.swift */; };
+		F08BA37C1955EA9E00C1DDAD /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA37B1955EA9E00C1DDAD /* CLLocationExtension.swift */; };
+		F08BA380195644DB00C1DDAD /* DecimalRGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08BA37F195644DA00C1DDAD /* DecimalRGBColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		F08BA36B1955DF3B00C1DDAD /* SimpleSpeedometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSpeedometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08BA3701955DF3B00C1DDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F08BA3711955DF3B00C1DDAD /* SimpleSpeedometerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSpeedometerTests.swift; sourceTree = "<group>"; };
+		F08BA37B1955EA9E00C1DDAD /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		F08BA37F195644DA00C1DDAD /* DecimalRGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalRGBColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				F08BA3621955DF3B00C1DDAD /* Main.storyboard */,
 				F08BA3651955DF3B00C1DDAD /* Images.xcassets */,
 				F08BA35C1955DF3B00C1DDAD /* Supporting Files */,
+				F08BA37B1955EA9E00C1DDAD /* CLLocationExtension.swift */,
+				F08BA37F195644DA00C1DDAD /* DecimalRGBColor.swift */,
 			);
 			path = SimpleSpeedometer;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08BA3611955DF3B00C1DDAD /* ViewController.swift in Sources */,
+				F08BA380195644DB00C1DDAD /* DecimalRGBColor.swift in Sources */,
+				F08BA37C1955EA9E00C1DDAD /* CLLocationExtension.swift in Sources */,
 				F08BA35F1955DF3B00C1DDAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,12 +13,15 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Speedi5.png",
+      "filename" : "1403390013_Streamline-73.png",
       "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "pre-rendered" : true
   }
 }
