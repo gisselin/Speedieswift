@@ -70,9 +70,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         case 51...90:
                 labelVitesse.textColor = DecimalUIColor(red: 67, green: 212, blue: 89, alpha: 255).getUIColor()
         case 91...130:
-                labelVitesse.textColor = DecimalUIColor(red: 255, green: 138, blue: 1, alpha: 1).getUIColor()
+                labelVitesse.textColor = DecimalUIColor(red: 255, green: 138, blue: 1, alpha: 255).getUIColor()
         default:
-                labelVitesse.textColor = DecimalUIColor(red: 255, green: 51, blue: 43, alpha: 1).getUIColor()
+                labelVitesse.textColor = DecimalUIColor(red: 255, green: 51, blue: 43, alpha: 255).getUIColor()
         }
     }
 }
