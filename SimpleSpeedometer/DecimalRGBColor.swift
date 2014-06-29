@@ -22,11 +22,12 @@ class DecimalUIColor {
         self.a = alphaDecimal;
         
     }
+    
     func getUIColor() -> UIColor {
-        let gR : CGFloat = CGFloat(self.r) / 255.0;
-        let gG : CGFloat = CGFloat(self.g) / 255.0;
-        let gB : CGFloat = CGFloat(self.b) / 255.0;
-        let gA : CGFloat = CGFloat(self.a) / 255.0;
+        let gR  = CGFloat(self.r) / 255.0;
+        let gG  = CGFloat(self.g) / 255.0;
+        let gB  = CGFloat(self.b) / 255.0;
+        let gA  = CGFloat(self.a) / 255.0;
         
         return UIColor(red: gR, green: gG, blue: gB, alpha: gA);
     }

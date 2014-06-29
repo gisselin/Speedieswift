@@ -14,11 +14,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet var labelVitesse: UILabel
     @IBOutlet var compteurVitesse: UIProgressView
+    @IBOutlet var brightnessProgressTest: UIProgressView
     
-    var locationManager:CLLocationManager!
+    var locationManager:CLLocationManager!;
+    var const : Constants!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+
+        const = Constants();
         
         //CoreLocation access
         locationManager = CLLocationManager()
@@ -26,20 +29,42 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.requestAlwaysAuthorization();
         locationManager.startUpdatingLocation();
+        
+        
+        //Orientation + brightness changes, to adjust the UI
+        let device : UIDevice = UIDevice.currentDevice();
+        let screen : UIScreen = UIScreen.mainScreen();
+        device.beginGeneratingDeviceOrientationNotifications();
+        let nc = NSNotificationCenter.defaultCenter();
+        nc.addObserver(self, selector:Selector("orientationChanged:"), name: UIDeviceOrientationDidChangeNotification, object: device);
+        nc.addObserver(self, selector: Selector("brightnessChanged:"), name: UIScreenBrightnessDidChangeNotification, object: screen)
 
         
-        //Orientation changes, in a future for a better layout
-        let device : UIDevice = UIDevice.currentDevice();
-        device.beginGeneratingDeviceOrientationNotifications();
-        let nc : NSNotificationCenter = NSNotificationCenter.defaultCenter();
-        nc.addObserver(self, selector:Selector("orientationChanged:"), name: UIDeviceOrientationDidChangeNotification, object: device);
+        // Disable sleep if device plugged in
+        let currentBatteryState = device.batteryState;
+        if currentBatteryState == .Charging || currentBatteryState == .Full
+        {
+            UIApplication.sharedApplication().idleTimerDisabled = true;
+        }
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func brightnessChanged(note:NSNotification)
+    {
+        brightnessProgressTest.progress = UIScreen.mainScreen().brightness;
+        switch (UIScreen.mainScreen().brightness)
+            {
+        case 0.0...0.30:
+            self.view.backgroundColor = UIColor.blackColor();
+        case 0.31...1.0:
+            self.view.backgroundColor = UIColor.whiteColor();
+        default:
+            self.view.backgroundColor = UIColor.whiteColor();
+        }
     }
     func orientationChanged(note: NSNotification)
     {
@@ -59,20 +84,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         var speed  = Int(manager.location.speed.kph)
         
         labelVitesse.text = "\(speed)";
+        
+        //130 kph Max speed in France.
         compteurVitesse.progress = CGFloat(speed) / 130.0;
         
         switch speed
             {
         case 0:
-                labelVitesse.textColor = UIColor.blackColor()
+            //Adjust speed label text color depending on background color
+            labelVitesse.textColor = (self.view.backgroundColor == UIColor.blackColor() ? UIColor.whiteColor() : UIColor.blackColor());
         case 1...50:
-                labelVitesse.textColor = DecimalUIColor(red: 0, green: 112, blue: 255, alpha: 255).getUIColor()
+            labelVitesse.textColor = const.SlowSpeedBlue;
         case 51...90:
-                labelVitesse.textColor = DecimalUIColor(red: 67, green: 212, blue: 89, alpha: 255).getUIColor()
+            labelVitesse.textColor = const.MidSpeedGreen;
         case 91...130:
-                labelVitesse.textColor = DecimalUIColor(red: 255, green: 138, blue: 1, alpha: 255).getUIColor()
+            labelVitesse.textColor = const.HighSpeedOrange;
         default:
-                labelVitesse.textColor = DecimalUIColor(red: 255, green: 51, blue: 43, alpha: 255).getUIColor()
+            labelVitesse.textColor = const.AbnormalSpeedRed;
         }
     }
 }

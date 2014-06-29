@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleSpeedometer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleSpeedometer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="42" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-mA-h1Z">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="190" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-mA-h1Z">
                                 <rect key="frame" x="0.0" y="187" width="320" height="194"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="154"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="191"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,6 +30,14 @@
                                     <constraint firstAttribute="width" secondItem="yVb-Iv-QsQ" secondAttribute="height" multiplier="140:1" id="7Hq-he-i4R"/>
                                 </constraints>
                             </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5yX-46-wJr">
+                                <rect key="frame" x="20" y="536" width="280" height="2"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999987"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5yX-46-wJr" secondAttribute="height" multiplier="140:1" id="JNb-lx-Idk"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -37,12 +45,14 @@
                             <constraint firstItem="yVb-Iv-QsQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="9j3-rk-Efm"/>
                             <constraint firstAttribute="centerY" secondItem="3Dr-mA-h1Z" secondAttribute="centerY" id="A7U-rL-4cl"/>
                             <constraint firstAttribute="centerX" secondItem="3Dr-mA-h1Z" secondAttribute="centerX" id="Zt8-pW-l6r"/>
+                            <constraint firstItem="5yX-46-wJr" firstAttribute="width" secondItem="5yX-46-wJr" secondAttribute="height" multiplier="140:1" id="hMP-qT-Zel"/>
                             <constraint firstAttribute="trailing" secondItem="yVb-Iv-QsQ" secondAttribute="trailing" constant="20" id="tnf-k8-DfC"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="brightnessProgressTest" destination="5yX-46-wJr" id="F4d-Ug-Q4f"/>
                         <outlet property="compteurVitesse" destination="yVb-Iv-QsQ" id="dtI-wH-jVV"/>
                         <outlet property="labelVitesse" destination="3Dr-mA-h1Z" id="T3j-cV-HBY"/>
                     </connections>
