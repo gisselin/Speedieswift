@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2019F6CF-E5D2-483D-AEA2-83A52CB5E30B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimpleSpeedometer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7964DAE072A671E2D14FF3E8B008596384112224</key>
+		<string>github.com:gisselin/Speedieswift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SimpleSpeedometer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7964DAE072A671E2D14FF3E8B008596384112224</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:gisselin/Speedieswift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7964DAE072A671E2D14FF3E8B008596384112224</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7964DAE072A671E2D14FF3E8B008596384112224</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Speedieswift</string>
+		</dict>
+	</array>
+</dict>
+</plist>
